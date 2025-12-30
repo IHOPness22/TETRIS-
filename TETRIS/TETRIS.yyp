@@ -27,6 +27,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
+    {"id":{"name":"spr_empty_block","path":"sprites/spr_empty_block/spr_empty_block.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
