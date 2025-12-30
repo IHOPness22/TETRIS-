@@ -1,4 +1,7 @@
-draw_sprite_stretched(spr_box, 0, x - 270, y - 90, ds_grid_width(board) * cell, ds_grid_height(board) * cell);
+var grid_x = x - 270;
+var grid_y = y - 90;
+
+var grid = draw_sprite_stretched(spr_box, 0, grid_x, grid_y, ds_grid_width(board) * cell, ds_grid_height(board) * cell);
    
 var grid_w = ds_grid_width(board);
 var grid_h = ds_grid_height(board);
@@ -23,9 +26,18 @@ for (var i = 0; i < grid_w; i++) {
             c_white,
             1);
         }
+        
     }
     
 }
+
+//draw current block on screen
+for (var i = 0; i < array_length(block1.cells); i++) {
+    var cx = block1.x + block1.cells[i].x;
+    var cy = block1.y + block1.cells[i].y;
+    draw_sprite(spr_block, 0, grid_x + cx * cell, grid_y + cy * cell);
+}
+
 
 
 
