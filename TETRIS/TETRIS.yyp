@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -25,6 +26,11 @@
   "resources":[
     {"id":{"name":"Obj_game_controller","path":"objects/Obj_game_controller/Obj_game_controller.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Custom_Functions","path":"scripts/Custom_Functions/Custom_Functions.yy",},},
+    {"id":{"name":"spr_block_2","path":"sprites/spr_block_2/spr_block_2.yy",},},
+    {"id":{"name":"spr_block_3","path":"sprites/spr_block_3/spr_block_3.yy",},},
+    {"id":{"name":"spr_block_4","path":"sprites/spr_block_4/spr_block_4.yy",},},
+    {"id":{"name":"spr_block_5","path":"sprites/spr_block_5/spr_block_5.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"spr_empty_block","path":"sprites/spr_empty_block/spr_empty_block.yy",},},
