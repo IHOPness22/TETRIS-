@@ -37,6 +37,7 @@ if leftKey {
 
 
 
+//check if piece can still fall and if not, lock it and save it to the grid
 
 var can_fall = true;
 move_tick++;
@@ -69,4 +70,17 @@ else if (next == true && locked == false) {
     next = false;
     current_block = spawn_block();
 }
+
+//check if row is full 
+for (var i=0; i< ds_grid_height(board); i++) {
+    for (var j = 0; j < ds_grid_width(board); j++) {
+        if ds_grid_get(board, j, i) != 0 {
+            ds_grid_set(board, j, i, 0);
+        }
+}
+}
+
+
+
+
 
