@@ -78,6 +78,8 @@ block_templates = [block1, block2, block3, block4, block5];
 locked = false;
 current_block = spawn_block();
 next = false;
+can_move_left = true;
+can_move_right = true;
 
 block_sprites = [];
 block_sprites[1] = spr_block_2;
