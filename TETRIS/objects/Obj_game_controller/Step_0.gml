@@ -74,13 +74,31 @@ else if (next == true && locked == false) {
 
 
 //check if row is full 
-//for (var xx=0; xx < ds_grid_width(board); xx++) {
-    //for (var yy=0; yy < ds_grid_height(board); xx++) {
-        //
-            
-        //}
-    //}
-//}
+for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
+    full = true;
+    
+    for (var j = 0; j < ds_grid_width(board); j++) {
+        if (board[# j, i] == 0) { 
+            full = false;   //however if we find a 0 value in that row than it 
+            break;      //instantly eliminates it 
+        }
+        
+    }
+     if (full) {
+        for (var j = 0; j < ds_grid_width(board); j++) {
+            ds_grid_set(board, j, i, 0);
+        }
+        
+        for (var j = 0; j < ds_grid_width(board); j++) {
+            for (var val = i - 1; val >= 0; val--) {
+                var new_val = ds_grid_get(board, j, val);
+                ds_grid_set(board, j, val + 1, new_val);
+            }
+        }
+    }
+}
+
+ 
 
 
 
