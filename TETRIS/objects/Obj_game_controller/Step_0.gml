@@ -71,14 +71,16 @@ else if (next == true && locked == false) {
     current_block = spawn_block();
 }
 
+
+
 //check if row is full 
-for (var i=0; i< ds_grid_height(board); i++) {
-    for (var j = 0; j < ds_grid_width(board); j++) {
-        if ds_grid_get(board, j, i) != 0 {
-            ds_grid_set(board, j, i, 0);
-        }
-}
-}
+//for (var xx=0; xx < ds_grid_width(board); xx++) {
+    //for (var yy=0; yy < ds_grid_height(board); xx++) {
+        //
+            
+        //}
+    //}
+//}
 
 
 

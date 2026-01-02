@@ -53,7 +53,7 @@ block4 = {
     {x: 0, y: 0},
     {x: 0, y: 1},
     {x: 1, y: 1},
-    {x: -1, y: 1}          //  |
+    {x: -1, y: 1}          //  d|
     ],                     // ___  shape tetrimonial 
     x: 4,
     y: 0,
