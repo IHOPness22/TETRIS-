@@ -42,9 +42,9 @@ for (var i = 0; i < grid_w; i++) {
 }
 
 //draw current block on screen
-for (var i = 0; i < array_length(current_block.cells); i++) {
-    var cx = current_block.x + current_block.cells[i].x;
-    var cy = current_block.y + current_block.cells[i].y;
+for (var i = 0; i < array_length(cells); i++) {
+    var cx = current_block.x + cells[i].x;
+    var cy = current_block.y + cells[i].y;
     draw_sprite(current_block.sprite, 0, grid_x + cx * cell, grid_y + cy * cell);
 }
 
