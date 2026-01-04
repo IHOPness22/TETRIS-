@@ -282,10 +282,9 @@ block5 = {
 
 
 
-//block_templates = [block1, block2, block3, block4, block5];
+block_templates = [block1, block2, block3, block4, block5];
 locked = false;
-//current_block = spawn_block();
-current_block = block5;
+current_block = spawn_block();
 next = false;
 can_move_left = true;
 can_move_right = true;
@@ -300,3 +299,6 @@ block_sprites[4] = spr_block_4;
 block_sprites[5] = spr_block_5;
 
 cells = current_block.states[current_block.rot_index];
+
+
+randomize();

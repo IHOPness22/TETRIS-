@@ -1,7 +1,7 @@
 var grid_x = x - 270;
 var grid_y = y - 90;
 
-draw_sprite_stretched(current_block.sprite, 0, grid_x, grid_y, ds_grid_width(board) * cell, ds_grid_height(board) * cell);
+draw_sprite_stretched(spr_box, 0, grid_x, grid_y, ds_grid_width(board) * cell, ds_grid_height(board) * cell);
    
 var grid_w = ds_grid_width(board);
 var grid_h = ds_grid_height(board);

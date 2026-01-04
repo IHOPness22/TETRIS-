@@ -3,11 +3,11 @@ function spawn_block(){
     
     var new_states = [];
     
-    for (var i=0; i<array_length(new_states); i++) {
-        new_states[i] = {
-            x: t.states[i].x,
-            y: t.states[i].y
-        };
+    for (var s=0; s<array_length(t.states); s++) {
+        new_states[s] = [];
+        for (var c=0; c < array_length(t.states[s]); c++) {
+            new_states[s][c] = { x: t.states[s][c].x, y: t.states[s][c].y};
+        }
     }
     
     return {

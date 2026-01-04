@@ -75,8 +75,9 @@ else if (locked == true && next == false) {
 
 else if (next == true && locked == false) {
     next = false;
-    //current_block = spawn_block();
-    current_block = block1;
+    current_block = spawn_block();
+    cells = current_block.states[current_block.rot_index];
+    next_rot = 0;
 }
 
 
