@@ -290,6 +290,7 @@ can_move_left = true;
 can_move_right = true;
 full = noone;
 next_rot = 0;
+test_rot = 0;
 
 block_sprites = [];
 block_sprites[1] = spr_block_2;

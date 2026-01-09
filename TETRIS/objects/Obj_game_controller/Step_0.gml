@@ -35,10 +35,27 @@ if leftKey {
 }
 
 if spaceKey {
-        next_rot = (current_block.rot_index + 1) mod 4;
-        current_block.rot_index = next_rot;
-        cells = current_block.states[current_block.rot_index];
+        test_rot = (current_block.rot_index + 1) mod 4;
+        can_rotate = true;
+        var test_cells = current_block.states[test_rot];
+        for (var i = 0; i < array_length(test_cells); i++) { 
+            var px = current_block.x + test_cells[i].x;
+            var py = current_block.y + test_cells[i].y;
+        if px < 0 || px >= ds_grid_width(board) || py >= ds_grid_height(board) || board[# px , py] != 0 {
+            can_rotate = false;
+            break;
+        }  
+        }  
+        if can_rotate {
+            next_rot = (current_block.rot_index + 1) mod 4;
+            current_block.rot_index = next_rot;
+            cells = current_block.states[current_block.rot_index];
+        } 
+            
+        //next_rot = (current_block.rot_index + 1) mod 4;
+       
 }
+
 
 
 
