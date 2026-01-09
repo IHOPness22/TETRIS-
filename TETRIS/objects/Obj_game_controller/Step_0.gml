@@ -57,7 +57,8 @@ if spaceKey {
 }
 
 
-
+//check move_timer depending on the level 
+fall_delay = max(30 - level * 2, 5);
 
 
 
@@ -65,7 +66,7 @@ if spaceKey {
 
 var can_fall = true;
 move_tick++;
-if (move_tick >= move_timer && locked == false && next == false) {
+if (move_tick >= fall_delay && locked == false && next == false) {
     move_tick = 0;
     for (var i = 0; i < array_length(cells); i++) { 
     var cx = current_block.x + cells[i].x;
@@ -113,6 +114,7 @@ for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
     }
      if (full) {
         line_check += 1;
+        line_total += 1;
         for (var j = 0; j < ds_grid_width(board); j++) {
             ds_grid_set(board, j, i, 0);
         }
@@ -135,8 +137,8 @@ for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
         else if line_check == 3 { points += 300;}
         else if line_check == 4 { points += 1200;} 
 
- 
-
+//we need to check when its time to level up  
+level = floor(line_total / 10);
 
 
 

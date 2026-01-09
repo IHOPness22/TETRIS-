@@ -3,9 +3,11 @@ ds_grid_clear(board, 0);
 cell = 32;
 occupied_cell = 0;
 move_tick = 0;
-move_timer = 20;
+fall_delay = 0;;
 points = 0;
 line_check = 0;
+line_total = 0;
+level = 0;
 
 /*#region 
 block1 = {
@@ -304,5 +306,4 @@ block_sprites[5] = spr_block_5;
 cells = current_block.states[current_block.rot_index];
 
 
-randomize();
 randomize();
