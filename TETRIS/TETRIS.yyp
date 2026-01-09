@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"fonts","folderPath":"folders/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -24,6 +25,7 @@
   },
   "name":"TETRIS",
   "resources":[
+    {"id":{"name":"fnt_earth","path":"fonts/fnt_earth/fnt_earth.yy",},},
     {"id":{"name":"Obj_game_controller","path":"objects/Obj_game_controller/Obj_game_controller.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Custom_Functions","path":"scripts/Custom_Functions/Custom_Functions.yy",},},

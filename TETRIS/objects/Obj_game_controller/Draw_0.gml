@@ -49,6 +49,10 @@ for (var i = 0; i < array_length(cells); i++) {
 }
 
 
+//draw score ui 
+draw_set_font(fnt_earth);
+draw_text_colour(50, 100, "Score: " + string(points) , c_lime, c_lime, c_lime, c_lime, 1);
+
 
 
 

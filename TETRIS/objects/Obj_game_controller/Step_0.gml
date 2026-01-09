@@ -98,6 +98,7 @@ else if (next == true && locked == false) {
 }
 
 
+line_check = 0;
 
 //check if row is full 
 for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
@@ -111,6 +112,7 @@ for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
         
     }
      if (full) {
+        line_check += 1;
         for (var j = 0; j < ds_grid_width(board); j++) {
             ds_grid_set(board, j, i, 0);
         }
@@ -120,9 +122,18 @@ for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
                 var new_val = ds_grid_get(board, j, val);
                 ds_grid_set(board, j, val + 1, new_val);
             }
+            
+            
         }
+        i -= 1;
+                     
     }
 }
+
+ if line_check == 1 { points += 40;}
+        else if line_check == 2 { points += 100;}
+        else if line_check == 3 { points += 300;}
+        else if line_check == 4 { points += 1200;} 
 
  
 
