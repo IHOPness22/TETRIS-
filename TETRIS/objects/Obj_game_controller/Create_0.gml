@@ -3,7 +3,7 @@ ds_grid_clear(board, 0);
 cell = 32;
 occupied_cell = 0;
 move_tick = 0;
-fall_delay = 0;;
+fall_delay = 0;
 points = 0;
 line_check = 0;
 line_total = 0;
@@ -305,5 +305,10 @@ block_sprites[5] = spr_block_5;
 
 cells = current_block.states[current_block.rot_index];
 
+next_block = spawn_block();
+
+queue_list = [];
+queue_list[0] = current_block;
+queue_list[1] = next_block;
 
 randomize();

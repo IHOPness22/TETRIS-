@@ -57,6 +57,19 @@ draw_text_colour(50, 100, "Score:  " + string(points) , c_lime, c_lime, c_lime, 
 draw_set_font(fnt_earth);
 draw_text_colour(55, 150, "Level:  " + string(level), c_lime, c_lime, c_lime, c_lime, 1);
 
+//draw NEXT: block
+draw_set_font(fnt_earth);
+draw_text_colour(55, 200, "Next: ", c_lime, c_lime, c_lime, c_lime, 1);
+
+//draw NEXT block
+draw_sprite_stretched(spr_box, 0, 55, 250, 150, 150);
+
+//draw the next block 
+for (var i = 0; i < array_length(cells); i++) {
+    var dx = next_block.x + cells[i].x;
+    var dy = next_block.y + cells[i].y;
+    draw_sprite(next_block.sprite, 0, 125, 300);
+}
 
 
 

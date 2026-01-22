@@ -94,6 +94,8 @@ else if (locked == true && next == false) {
 else if (next == true && locked == false) {
     next = false;
     current_block = spawn_block();
+    //this will be for summoning the queue
+    var next_type = spawn_block();
     cells = current_block.states[current_block.rot_index];
     next_rot = 0;
 }
@@ -139,6 +141,7 @@ for (var i=0; i < ds_grid_height(board); i++) { //assume row is full
 
 //we need to check when its time to level up  
 level = floor(line_total / 10);
+
 
 
 
