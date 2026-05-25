@@ -1,6 +1,7 @@
 leftKey = keyboard_check_pressed(ord("A"));
 rightKey = keyboard_check_pressed(ord("D"));
 spaceKey = keyboard_check_pressed(vk_space);
+downKey = keyboard_check(ord("S"));
 
 //movement based on input 
 
@@ -56,6 +57,8 @@ if spaceKey {
        
 }
 
+if downKey { move_speed = 3; }  else { move_speed = 1; }
+
 
 //check move_timer depending on the level 
 fall_delay = max(30 - level * 2, 5);
@@ -72,7 +75,7 @@ if (!chosen) {
 //check if piece can still fall and if not, lock it and save it to the grid
 
 var can_fall = true;
-move_tick++;
+move_tick += 1 * move_speed;
 if (move_tick >= fall_delay && locked == false && next == false) {
     move_tick = 0;
     for (var i = 0; i < array_length(cells); i++) { 

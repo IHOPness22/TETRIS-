@@ -296,6 +296,7 @@ full = noone;
 next_rot = 0;
 test_rot = 0;
 chosen = false;
+move_speed = 1;
 
 block_sprites = [];
 block_sprites[1] = spr_block_2;
@@ -314,4 +315,3 @@ queue_list[0] = current_block;
 queue_list[1] = next_block;
 next_type = noone;
 
-randomize();
