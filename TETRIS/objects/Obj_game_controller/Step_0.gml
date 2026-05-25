@@ -61,6 +61,13 @@ if spaceKey {
 fall_delay = max(30 - level * 2, 5);
 
 
+if (!chosen) { 
+    chosen = true;
+    next_block = spawn_block(irandom(array_length(block_templates)-1)); 
+    new_cells = next_block.states[next_block.rot_index];
+} 
+
+
 
 //check if piece can still fall and if not, lock it and save it to the grid
 
@@ -93,11 +100,11 @@ else if (locked == true && next == false) {
 
 else if (next == true && locked == false) {
     next = false;
-    current_block = spawn_block();
-    //this will be for summoning the queue
-    var next_type = spawn_block();
-    cells = current_block.states[current_block.rot_index];
+    current_block = next_block;
+    //this will be for summmoning
+    cells = new_cells;
     next_rot = 0;
+    chosen = false;
 }
 
 

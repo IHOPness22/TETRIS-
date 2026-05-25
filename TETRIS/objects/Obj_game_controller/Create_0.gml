@@ -9,9 +9,9 @@ line_check = 0;
 line_total = 0;
 level = 0;
 
-/*#region 
+#region 
 block1 = {
-    cells0: [
+    cells: [
     {x: 0, y: 0},          // L shape tetrimonial 
     {x: 1, y: 0},   
     {x: 0, y: 1},   
@@ -27,7 +27,7 @@ block1 = {
 };
 
 block2 = {
-    cells0: [
+    cells: [
     {x: 0, y: 0},
     {x: 1, y: 0},          // sqaure shape tetrimonial 
     {x: 0, y: 1},
@@ -55,7 +55,7 @@ block3 = {
 };
 
 block4 = {
-    cells0: [
+    cells: [
     {x: 0, y: 0},
     {x: 0, y: 1},
     {x: 1, y: 1},
@@ -68,7 +68,7 @@ block4 = {
 };
 
 block5 = {
-    cells0: [
+    cells: [
     {x: 0, y: 0},
     {x: 1, y: 0},
     {x: 0, y: 1},
@@ -80,7 +80,6 @@ block5 = {
     val: 5
 };
 #endregion
-*/
 
 #region   //block1
 block1 = {
@@ -288,13 +287,15 @@ block5 = {
 
 block_templates = [block1, block2, block3, block4, block5];
 locked = false;
-current_block = spawn_block();
+current_block = spawn_block(irandom(array_length(block_templates)-1));
+next_block = spawn_block(irandom(array_length(block_templates)-1));
 next = false;
 can_move_left = true;
 can_move_right = true;
 full = noone;
 next_rot = 0;
 test_rot = 0;
+chosen = false;
 
 block_sprites = [];
 block_sprites[1] = spr_block_2;
@@ -304,11 +305,13 @@ block_sprites[4] = spr_block_4;
 block_sprites[5] = spr_block_5;
 
 cells = current_block.states[current_block.rot_index];
+new_cells = next_block.states[next_block.rot_index];
 
-next_block = spawn_block();
+
 
 queue_list = [];
 queue_list[0] = current_block;
 queue_list[1] = next_block;
+next_type = noone;
 
 randomize();

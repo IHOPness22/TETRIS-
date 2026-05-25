@@ -1,9 +1,36 @@
-function spawn_block(){
+/*function spawn_block(){
     var t = block_templates[irandom(array_length(block_templates) - 1)];
     
     var new_states = [];
     
     for (var s=0; s<array_length(t.states); s++) {
+        new_states[s] = [];
+        for (var c=0; c < array_length(t.states[s]); c++) {
+            new_states[s][c] = { x: t.states[s][c].x, y: t.states[s][c].y};
+        }
+    }
+    
+    return {
+        states: new_states,
+        x: 4,
+        y: 0,
+        sprite: t.sprite,
+        rot_index: 0,
+        val: t.val
+    };
+} */
+
+function display_next_block(){
+    var t = block_templates[irandom(array_length(block_templates) - 1)];
+    
+    return t;
+}
+
+function spawn_block(selected) {
+    var t = block_templates[selected];
+    var new_states = [];
+    
+    for (var s=0; s <array_length(t.states); s++) {
         new_states[s] = [];
         for (var c=0; c < array_length(t.states[s]); c++) {
             new_states[s][c] = { x: t.states[s][c].x, y: t.states[s][c].y};
